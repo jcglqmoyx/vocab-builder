@@ -3,7 +3,7 @@
 echo "开始编译"
 
 app_name='Vocabulary Builder'
-target_dir='./target/Vocabulary Builder'
+target_dir='./target'
 
 echo "编译到MacOS(Intel)平台中.."
 macos_intel_dir="$target_dir/MacOS.Intel"
