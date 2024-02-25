@@ -1,0 +1,60 @@
+mode:
+  release
+
+server:
+  port: 8080
+
+jwt:
+  secret: vocab-builder-jwt-secret-key
+
+log:
+  path: app.log
+  max_age: 30
+  max_size: 10
+  max_backups: 3
+  compress: true
+  local_time: true
+
+sqlite:
+  path: app.db
+  max_open_conns: 30
+  max_idle_conns: 10
+  conn_max_lifetime: 1
+
+book:
+  max_title_length: 32
+  max_category_length: 32
+  max_file_size: 10485760
+  upload_path: ./uploads/book
+
+entry:
+  max_word_length: 128
+  max_meaning_length: 20480
+  max_note_length: 20480
+  default_date_to_review: 99991231
+
+dictionary:
+  max_title_length: 128
+  max_prefix_length: 256
+  max_suffix_length: 256
+  dictionaries:
+    - title: Google
+      prefix: https://www.google.com/search?q=
+      suffix:
+    - title: YouGlish
+      prefix: https://youglish.com/pronounce/
+      suffix: /english/us?
+    - title: Merriam-Webster Dictionary
+      prefix: https://www.merriam-webster.com/dictionary/
+      suffix:
+    - title: 有道词典
+      prefix: https://youdao.com/result?word=
+      suffix: "&lang=en"
+    - title: Youtube
+      prefix: https://www.youtube.com/results?search_query=
+      suffix:
+
+machine:
+  activation_code: 1
+
+license_server_address_publication_link: https://gitee.com/jcglqmoyx/vocab-builder-license/raw/master/README.md
