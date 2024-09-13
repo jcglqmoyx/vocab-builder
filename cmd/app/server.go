@@ -9,7 +9,6 @@ import (
 	"path/filepath"
 	"vocab-builder/pkg/server/conf"
 	"vocab-builder/pkg/server/router"
-	"vocab-builder/pkg/server/util"
 )
 
 func readConfig(cfg *conf.Config, path string) error {
@@ -36,10 +35,6 @@ func Run() {
 	}
 
 	conf.Cfg.Sqlite.Path = exeDir + "/" + conf.Cfg.Sqlite.Path
-
-	if !util.Activate() {
-		return
-	}
 
 	gin.SetMode(conf.Cfg.Mode)
 	conf.InitLogger(conf.Cfg.Log)

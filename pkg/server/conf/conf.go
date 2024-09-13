@@ -52,16 +52,15 @@ type MachineConfig struct {
 }
 
 type Config struct {
-	Mode                                string            `yaml:"mode"`
-	Server                              *ServerConfig     `yaml:"server"`
-	JWT                                 *JWTConfig        `yaml:"jwt"`
-	Log                                 *LogConfig        `yaml:"log"`
-	Sqlite                              *DBConfig         `yaml:"sqlite"`
-	Book                                *BookConfig       `yaml:"book"`
-	Entry                               *EntryConfig      `yaml:"entry"`
-	Dictionary                          *DictionaryConfig `yaml:"dictionary"`
-	Machine                             *MachineConfig    `yaml:"machine"`
-	LicenseServerAddressPublicationLink string            `yaml:"license_server_address_publication_link"`
+	Mode       string            `yaml:"mode"`
+	Server     *ServerConfig     `yaml:"server"`
+	JWT        *JWTConfig        `yaml:"jwt"`
+	Log        *LogConfig        `yaml:"log"`
+	Sqlite     *DBConfig         `yaml:"sqlite"`
+	Book       *BookConfig       `yaml:"book"`
+	Entry      *EntryConfig      `yaml:"entry"`
+	Dictionary *DictionaryConfig `yaml:"dictionary"`
+	Machine    *MachineConfig    `yaml:"machine"`
 }
 
 var Cfg Config
