@@ -47,10 +47,6 @@ type DictionaryConfig struct {
 	Dictionaries    []*model.Dictionary `yaml:"dictionaries"`
 }
 
-type MachineConfig struct {
-	ActivationCode string `yaml:"activation_code"`
-}
-
 type Config struct {
 	Mode       string            `yaml:"mode"`
 	Server     *ServerConfig     `yaml:"server"`
@@ -60,7 +56,6 @@ type Config struct {
 	Book       *BookConfig       `yaml:"book"`
 	Entry      *EntryConfig      `yaml:"entry"`
 	Dictionary *DictionaryConfig `yaml:"dictionary"`
-	Machine    *MachineConfig    `yaml:"machine"`
 }
 
 var Cfg Config
