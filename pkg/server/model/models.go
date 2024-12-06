@@ -35,8 +35,8 @@ type Entry struct {
 	BookID       int            `gorm:"column:book_id" form:"book_id" json:"book_id"`
 	UserID       int            `gorm:"column:user_id" form:"user_id" json:"user_id"`
 	Note         string         `gorm:"column:note" form:"note" json:"note"`
-	Unwanted     bool           `gorm:"column:unwanted" form:"unwanted" json:"unwanted,omitempty"`
-	StudyCount   int            `gorm:"column:study_count" form:"study_count" json:"study_count,omitempty"`
+	Unwanted     bool           `gorm:"column:unwanted" form:"unwanted" json:"unwanted"`
+	StudyCount   int            `gorm:"column:study_count" form:"study_count" json:"study_count"`
 	DateToReview int            `gorm:"column:date_to_review;default:99991231" form:"date_to_review" json:"date_to_review"`
 	CreatedAt    time.Time      `json:"created_at" form:"created_at"`
 	UpdatedAt    time.Time      `json:"updated_at" form:"updated_at"`
